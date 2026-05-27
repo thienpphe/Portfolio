@@ -292,6 +292,38 @@ h2::after {
     display: none !important;
 }
 
+/* --- Social Links --- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    transition: all var(--transition-speed);
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    background-color: var(--accent-blue);
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon svg {
+    transition: stroke var(--transition-speed);
+}
+
 /* --- Footer --- */
 .site-footer {
     padding: 2rem 0;
