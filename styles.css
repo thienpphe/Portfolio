@@ -152,6 +152,70 @@ h2::after {
     background-color: var(--accent-hover);
 }
 
+/* --- About Section & Skills --- */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Media query for desktop layout */
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .about-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .about-content {
+        flex: 2;
+    }
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 4px solid var(--accent-blue);
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-main);
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skills-list li {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #333;
+    transition: transform var(--transition-speed);
+}
+
+.skills-list li:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-blue);
+}
+
 /* --- Projects & Filter --- */
 .filter-controls {
     display: flex;
@@ -178,7 +242,6 @@ h2::after {
     color: #fff;
 }
 
-/* CSS Grid for exactly 6 layout logic (responsive) */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -225,7 +288,6 @@ h2::after {
     flex-grow: 1;
 }
 
-/* Helper class for JS filtering */
 .hidden {
     display: none !important;
 }
